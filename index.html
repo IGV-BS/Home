@@ -1,0 +1,381 @@
+<!DOCTYPE html> <html class="scroll-smooth" lang="en"> <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>IGV | Test Pdf</title>
+  <link href="styles.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+
+<body class="min-h-screen flex flex-col relative bg-[#e5e7eb]">
+
+<!-- Header with top bar -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a class="logo-link" href="#">IGV Book Shop</a>
+      </div>
+      <nav class="nav sidebar-nav">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link contact-link" href="#">Contact us</a>
+      </nav>
+      <!-- Add this inside header-container -->
+      <button id="mobile-menu-button" class="md:hidden" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  
+<!-- Main content -->
+  <main class="main-container" id="main-container">
+    <div class="main-left" id="main-left">
+
+<!-- Main-a Div -->
+      <div class="main-a" id="main-a">
+        <div class="book-cover-container">
+          <img alt="Main book cover" class="main-cover" id="main-cover" src="images/cover 1.png"/>
+          <div class="thumbnail-gallery">
+
+            <!-- Thumbnails for the book cover images -->
+            <img src="images/cover 1.png" alt="Thumbnail" class="thumbnail" data-large="images/cover 1.png" loading="lazy">
+            <img src="images/cover 2.png" alt="Thumbnail" class="thumbnail" data-large="images/cover 2.png" loading="lazy">
+            <img src="images/cover 3.png" alt="Thumbnail" class="thumbnail" data-large="images/cover 3.png" loading="lazy">
+            <img src="images/cover 4.png" alt="Thumbnail" class="thumbnail" data-large="images/cover 4.png" loading="lazy">
+          </div>
+        </div>
+        <section class="book-info-section">
+          <div>
+
+              <!-- Book Name -->
+            <h1 class="book-title"> උත්තර සතර ප්‍රශ්න පත්‍ර කට්ටලය </h1>
+            <div class="rating-container">
+
+              <!-- Book Review -->
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span class="rating-text">4.5 (234 reviews)</span>
+              <span class="divider">|</span>
+              <span class="views"><i class="fas fa-eye"></i> 5,678 views</span>
+            </div>
+
+            <!-- Book Price -->
+            <div class="price-section">
+              <div class="price-current">Rs.39.99</div>
+              <div class="price-original">Rs.49.99</div>
+              <div class="price-discount">20% OFF</div>
+            </div>
+            <div class="availability">
+              <div class="in-stock">
+                <i class="fas fa-check-circle"></i>
+                <span>In Stock</span>
+              </div>
+              <div class="orders">
+                <i class="fas fa-check-circle"></i>
+                <span>Orders 1245</span>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <a aria-label="Order via WhatsApp" href="https://wa.me/94701469231?text=I%20want%20to%20order%20this%20book" target="_blank" rel="noopener" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i>
+                වට්ම්ඇප් හරහා ඔඩර් කරන්න
+              </a>
+            </div>
+            <div class="delivery-options">
+              <div class="delivery-option">
+                <i class="fas fa-truck"></i>
+                <span>දින 2 - 3 අතර ලංකාව පුරා බෙදා හැරීම</span>
+              </div>
+              <!--
+              <div class="delivery-option">
+                <i class="fas fa-undo-alt"></i>
+                <span>30-day easy returns</span>
+              </div>
+              -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+<!-- Main-c Div -->
+      <div class="main-c" id="main-c">
+        <div class="features-title-container" id="features">
+          <h2 class="features-title" id="features-title">පොත ගැන</h2>
+        </div>
+        <div class="details-tabs">
+          <div class="tabs-header">
+            <button id="tab-details" class="tab-button active" type="button">පොත ගැන</button>
+            <button id="tab-specifications" class="tab-button" type="button">Specifications</button>
+            <button id="tab-shipping" class="tab-button" type="button">Shipping</button>
+            <button id="tab-returns" class="tab-button" type="button">Returns</button>
+          </div>
+          <div id="tab-content" class="tab-content">
+            <h3 class="tab-content-title">පොත ගැන</h3>
+            <p>
+              This book is a hardcover edition measuring 9 x 6 inches, containing 350 pages of high-quality paper. It includes a foreword by a celebrated author and an index for easy reference.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+<!-- Main-d Div -->
+      <div class="main-d" id="main-d">
+        <div id="pdf-top-bar" aria-label="PDF viewer controls">
+          <div class="spacer"></div>
+          <div id="pdf-page-info" aria-live="polite" aria-atomic="true">Page 1 of 3</div>
+          <button id="pdf-fullscreen-btn" aria-label="Toggle full screen PDF viewer" title="Toggle full screen">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+        <section aria-label="PDF Viewer" class="pdf-scroll">
+          <div id="pdf-pages-container">
+            <img alt="PDF page 1" src="images/pdf 1.png" class="pdf-page"/>
+            <div class="locked-page">
+              <img alt="PDF page 2 (locked)" src="images/pdf 2.png" class="pdf-page"/>
+              <i class="fas fa-lock lock-icon"></i>
+            </div>
+            <div class="locked-page">
+              <img alt="PDF page 3 (locked)" src="images/pdf 3.png" class="pdf-page"/>
+              <i class="fas fa-lock lock-icon"></i>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+
+<!-- Main-b Div -->
+    <div id="main-b" class="main-b">
+      <aside class="sidebar">
+        <section aria-labelledby="about-editor-title" class="about-editor">
+          <h2 id="about-editor-title" style="text-align-last: center;"> <b>ගුරුවරයා ගැන</b></h2>
+          <div class="editor-content">
+            <img alt="Portrait of the book editor" class="editor-image" src="images/teacher.png"/>
+            <p class="editor-description">
+              රජයේ පාසල් ගුරුවරයෙකි.
+            </p>
+          </div>
+        </section>
+        <section aria-labelledby="you-might-also-like-small" class="recommendations" id="you-might-also-like-small">
+          <h3>තවත් නිර්දේෂ</h3>
+          <ul class="recommendations-list">
+            <li>
+              <a href="https://www.google.com" target="_blank" rel="noopener">
+                <div class="recommendation-item">
+                  <div class="book-title-bar">The Timeless Tale</div>
+                  <div class="book-content">
+                    <img alt="Cover of book titled 'The Timeless Tale'" src="images/book 1.png"/>
+                    <div class="book-info">
+                      <p class="stock-info"><i class="fas fa-check-circle"></i> In Stock</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com" target="_blank" rel="noopener">
+                <div class="recommendation-item">
+                  <div class="book-title-bar">Echoes of the Past</div>
+                  <div class="book-content">
+                    <img alt="Cover of book titled 'Echoes of the Past'" src="images/book 2.png"/>
+                    <div class="book-info">
+                      <p class="stock-info"><i class="fas fa-check-circle"></i> In Stock</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com" target="_blank" rel="noopener">
+                <div class="recommendation-item">
+                  <div class="book-title-bar">Echoes of the Past</div>
+                  <div class="book-content">
+                    <img alt="Cover of book titled 'Echoes of the Past'" src="images/book 2.png"/>
+                    <div class="book-info">
+                      <p class="stock-info"><i class="fas fa-check-circle"></i> In Stock</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com" target="_blank" rel="noopener">
+                <div class="recommendation-item">
+                  <div class="book-title-bar">Echoes of the Past</div>
+                  <div class="book-content">
+                    <img alt="Cover of book titled 'Echoes of the Past'" src="images/book 2.png"/>
+                    <div class="book-info">
+                      <p class="stock-info"><i class="fas fa-check-circle"></i> In Stock</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com" target="_blank" rel="noopener">
+                <div class="recommendation-item">
+                  <div class="book-title-bar">Echoes of the Past</div>
+                  <div class="book-content">
+                    <img alt="Cover of book titled 'Echoes of the Past'" src="images/book 2.png"/>
+                    <div class="book-info">
+                      <p class="stock-info"><i class="fas fa-check-circle"></i> In Stock</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  
+<!-- Social media icons fixed right side middle corner -->
+  <div id="social-icons-right" aria-label="Social media links">
+    <a aria-label="WhatsApp" class="social-icon icon-whatsapp" href="https://wa.me/94701469231" rel="noopener" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a aria-label="Facebook" class="social-icon icon-facebook" href="https://facebook.com/share/1BuQwQwndm/" rel="noopener" target="_blank" title="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a aria-label="Telegram" class="social-icon icon-telegram" href="https://t.me/GanakaVilas" rel="noopener" target="_blank" title="Telegram">
+      <i class="fab fa-telegram-plane"></i>
+    </a>
+  </div>
+
+
+<!-- Trigger Button -->
+  <button id="open-popup" class="open-popup-btn">Contact Us</button>
+
+
+<!-- Contact Popup -->
+  <div id="contact-popup" class="contact-popup">
+    <div class="contact-popup-content">
+      <button id="close-popup" class="close-popup" aria-label="Close contact popup">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>Contact Us</h2>
+      <hr class="popup-divider">
+      
+     <!-- Social Media Links Only -->
+      <div class="social-media-links">
+        <a href="https://wa.me/94701469231" target="_blank" class="social-media-link whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.facebook.com/share/1BuQwQwndm/" target="_blank" class="social-media-link facebook">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+        <a href="https://t.me/GanakaVilas" target="_blank" class="social-media-link telegram">
+          <i class="fab fa-telegram-plane"></i> Telegram
+        </a>
+      </div>
+      <hr class="popup-divider">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+94 70 146 9231</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>GanakaVilas@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Scroll buttons -->
+  <div id="page-scroll-buttons">
+    <button class="scroll-btn" id="scroll-down" title="Scroll to Bottom" aria-label="Scroll to Bottom">
+      👇
+    </button>
+    <button class="scroll-btn" id="scroll-up" title="Scroll to Top" aria-label="Scroll to Top">
+      ☝️
+    </button>
+  </div>
+
+
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <div class="footer-section">
+          <h2>IGV Book Shop</h2>
+          <div class="footer-links">
+            <a href="https://www.facebook.com/share/1BuQwQwndm/" target="_blank" rel="noopener">Facebook Page</a>
+            <a href="https://whatsapp.com/channel/0029VbAmMYD8qIzwM59eRY2R" target="_blank" rel="noopener">WhatsApp Channel</a>
+            <a href="https://t.me/IGVBookshop" target="_blank" rel="noopener">Telegram Channel</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h2>5 Hapan</h2>
+          <div class="footer-links">
+            <a href="#" target="_blank" rel="noopener">Facebook Group</a>
+            <a href="#" target="_blank" rel="noopener">WhatsApp Community</a>
+            <a href="#" target="_blank" rel="noopener">Telegram Channel</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h2>Contact</h2>
+          <div class="footer-links">
+            <a href="https://www.facebook.com/share/1BuQwQwndm/" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://wa.me/94701469231" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="http://t.me/GanakaVilas" target="_blank" rel="noopener">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-center">
+      <p>&copy; IGV Book Shop. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Disable right-click, text selection, and dev tools
+      document.addEventListener('contextmenu', function(e) {
+        if (!e.target.classList.contains('first-pdf-page')) {
+          e.preventDefault();
+        }
+      });
+
+      document.addEventListener('selectstart', function(e) {
+        if (!e.target.classList.contains('first-pdf-page')) {
+          e.preventDefault();
+        }
+      });
+
+      ['cut', 'copy', 'paste'].forEach(function(event) {
+        document.addEventListener(event, function(e) {
+          if (!e.target.classList.contains('first-pdf-page')) {
+            e.preventDefault();
+          }
+        });
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || 
+            (e.ctrlKey && e.shiftKey && e.key === 'I') || 
+            (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+            (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+            (e.ctrlKey && e.key === 'U')) {
+          e.preventDefault();
+        }
+      });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
